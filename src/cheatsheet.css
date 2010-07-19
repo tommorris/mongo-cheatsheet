@@ -1,0 +1,19 @@
+dl {
+  padding: 0.5em;
+}
+
+dt {
+  float: left;
+  clear: left;
+  width: 150px;
+  text-align: right;
+}
+
+dt:after {
+  content: ":";
+}
+
+dd { 
+  margin: 0 0 0 160px;
+  padding: 0 0 0.5em 0;
+}

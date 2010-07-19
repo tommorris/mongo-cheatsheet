@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MongoDB Cheatsheet</title>
+    <link rel="stylesheet" href="cheatsheet.css" type="text/css" charset="utf-8" />
+  </head>
+  <body>
+    <h1 id="heading">MongoDB Cheatsheet</h1>
+    <h2 id="Operators">Operators</h2>
+    <dl>
+    <dt>$lt</dt>
+    <dd>less than</dd>
+    <dt>$lte</dt>
+    <dd>less than or equal to</dd>
+    <dt>$gt</dt>
+    <dd>greater than</dd>
+    <dt>$gte</dt>
+    <dd>greater than or equal to</dd>
+    <dt>$ne</dt>
+    <dd>not equal to</dd>
+    <dt>$in</dt>
+    <dd>is in array</dd>
+    <dt>$nin</dt>
+    <dd>not in array</dd>
+    <dt>$exists</dt>
+    <dd>key exists - takes boolean true or false</dd>
+    <dt>$mod</dt>
+    <dd>fast modulo - where a % 10 == 1, provide array of [10, 1]</dd>
+    <dt>$all</dt>
+    <dd>array must contain all values specified in argument array</dd>
+    <dt>$size</dt>
+    <dd>array size</dd>
+    <dt>$type</dt>
+    <dd>matches on type - see type table below</dd>
+    <dt>$or</dt>
+    <dd>Boolean or expression to do queries.<br />e.g. {$or : [ {a : 1 }, {b : 2} ] }</dd>
+    <dt>$not</dt>
+    <dd>Negate check - {x: {$not : {$exists : true }}}</dd>
+    <dt>$where</dt>
+    <dd>JavaScript expression that evaluates to true or false.<br />e.g. { $where : "this. a &gt; 3" }</dd>
+    </dl>
+
+    <h2>Type Chart</h2>
+    <table>
+    <tr><th>Type Name</th> <th>Type Number</th></tr>
+    <tr><td>Double</td> <td>1</td></tr>
+    <tr><td>String</td> <td>2</td></tr>
+    <tr><td>Object</td> <td>3</td></tr>
+    <tr><td>Aray</td> <td>4</td></tr>
+    <tr><td>Binary data</td> <td>5</td></tr>
+    <tr><td>Object ID</td> <td>7</td></tr>
+    <tr><td>Boolean</td> <td>8</td></tr>
+    <tr><td>Date</td> <td>9</td></tr>
+    <tr><td>Null</td> <td>10</td></tr>
+    <tr><td>Regex</td> <td>11</td></tr>
+    <tr><td>JS code</td> <td>13</td></tr>
+    <tr><td>Symbol</td> <td>14</td></tr>
+    <tr><td>JS code with scope</td> <td>15</td></tr>
+    <tr><td>32-bit int</td> <td>16</td></tr>
+    <tr><td>Timestamp</td> <td>17</td></tr>
+    <tr><td>64-bit int</td> <td>18</td></tr>
+    <tr><td>Min key</td> <td>255</td></tr>
+    <tr><td>Max key</td> <td>127</td></tr>
+    </table>
+  </body>
+</html>
